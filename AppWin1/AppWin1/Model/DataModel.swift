@@ -16,8 +16,8 @@ final class DataModel: DataProtocol {
     func fetchData() -> [Product] {
         var products: [Product] = []
 
-        for (i, product) in Datas.products.enumerated() {
-            products.append(Product(title: product, items: Datas.items[i]))
+        for (i, product) in Data.products.enumerated() {
+            products.append(Product(title: product, items: Data.items[i]))
         }
 
         return products

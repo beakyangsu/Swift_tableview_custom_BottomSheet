@@ -11,7 +11,7 @@
 		DE9E51C12C1AE7CF0006ACC4 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E51C02C1AE7CF0006ACC4 /* ItemListViewController.swift */; };
 		DE9E51C32C1AE9640006ACC4 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E51C22C1AE9640006ACC4 /* LabelCell.swift */; };
 		DE9E51CA2C1AEA690006ACC4 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E51C92C1AEA690006ACC4 /* DataModel.swift */; };
-		DE9E51CC2C1AEB2E0006ACC4 /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E51CB2C1AEB2E0006ACC4 /* Datas.swift */; };
+		DE9E51CC2C1AEB2E0006ACC4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E51CB2C1AEB2E0006ACC4 /* Data.swift */; };
 		DE9E51CE2C1AEB400006ACC4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E51CD2C1AEB400006ACC4 /* Product.swift */; };
 		DE9E51D02C1AEE470006ACC4 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9E51CF2C1AEE470006ACC4 /* ProductModel.swift */; };
 		DEB2756B2C1971370057602B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2756A2C1971370057602B /* AppDelegate.swift */; };
@@ -30,7 +30,7 @@
 		DE9E51C02C1AE7CF0006ACC4 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		DE9E51C22C1AE9640006ACC4 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
 		DE9E51C92C1AEA690006ACC4 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		DE9E51CB2C1AEB2E0006ACC4 /* Datas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
+		DE9E51CB2C1AEB2E0006ACC4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		DE9E51CD2C1AEB400006ACC4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		DE9E51CF2C1AEE470006ACC4 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		DEB275672C1971370057602B /* AppWin1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppWin1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				DE9E51C92C1AEA690006ACC4 /* DataModel.swift */,
-				DE9E51CB2C1AEB2E0006ACC4 /* Datas.swift */,
+				DE9E51CB2C1AEB2E0006ACC4 /* Data.swift */,
 				DE9E51CD2C1AEB400006ACC4 /* Product.swift */,
 			);
 			path = Model;
@@ -225,7 +225,7 @@
 				DE9E51CE2C1AEB400006ACC4 /* Product.swift in Sources */,
 				DEE475EA2C1B114D0091850F /* UIView+Extention.swift in Sources */,
 				DEB2756D2C1971370057602B /* SceneDelegate.swift in Sources */,
-				DE9E51CC2C1AEB2E0006ACC4 /* Datas.swift in Sources */,
+				DE9E51CC2C1AEB2E0006ACC4 /* Data.swift in Sources */,
 				DE9E51BF2C1AE7310006ACC4 /* ProductListViewController.swift in Sources */,
 				DEE475E82C1B01760091850F /* BottomSheet.swift in Sources */,
 				DE9E51C32C1AE9640006ACC4 /* LabelCell.swift in Sources */,

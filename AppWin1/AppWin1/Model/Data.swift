@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Datas {
+struct Data {
     static let products: [String] = ["동물", "과일", "야구"]
     static let items: [[Item]] = [
         [Item(name: "사자", image: "rion", description: "사자입니다."), Item(name: "강아지", image: "dog", description: "강아지입니다."),
