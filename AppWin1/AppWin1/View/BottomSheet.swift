@@ -13,8 +13,7 @@ class BottomSheet: UIView {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var desc: UILabel!
 
-    private let screenWidth = UIScreen.main.bounds.size.width
-    private let screenHeight = UIScreen.main.bounds.size.height
+    private var isShow = false
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,10 +24,19 @@ class BottomSheet: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         xibSetup()
-
     }
 
-    func xibSetup() {
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+        isShow ? setshowFrame() : sethideFrame()
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        isShow ? setshowFrame() : sethideFrame()
+    }
+
+    private func xibSetup() {
         guard let view = Bundle.main.loadNibNamed("BottomSheet", owner: self)?.first as? UIView else { return }
 
         view.frame = bounds
@@ -37,9 +45,26 @@ class BottomSheet: UIView {
 
         self.roundTop()
         self.translatesAutoresizingMaskIntoConstraints = true
-        self.frame = CGRect(x: 0, y: self.screenHeight, width: self.screenWidth, height: 0)
+
+        let screenHeight = UIScreen.main.bounds.size.height
+        let screenWidth = UIScreen.main.bounds.size.width
+        let h = ceil(screenHeight/2)
+        self.frame.size = CGSize(width: screenWidth, height: h)
+        self.frame.origin = CGPoint(x: 0, y: screenHeight)
+
     }
 
+    private func setshowFrame() {
+        let screenHeight = UIScreen.main.bounds.size.height
+        let screenWidth = UIScreen.main.bounds.size.width
+        let h = ceil(screenHeight/2)
+        self.frame = CGRect(x: 0, y: h, width: screenWidth, height: h)
+    }
+
+    private func sethideFrame() {
+        let screenHeight = UIScreen.main.bounds.size.height
+        self.frame.origin = CGPoint(x: 0, y: screenHeight)
+    }
 
     func setLabels(label: String = "설명", description: String) {
         title.text = label
@@ -47,15 +72,16 @@ class BottomSheet: UIView {
     }
 
     func show() {
+        isShow = true
         UIView.animate(withDuration: 0.5, animations: {
-            let h = ceil(self.screenHeight/2)
-            self.frame = CGRect(x: 0, y: h, width: self.screenWidth, height: h)
+            self.setshowFrame()
         })
     }
 
     func hide() {
+        isShow = false
         UIView.animate(withDuration: 0.5, animations: {
-            self.frame = CGRect(x: 0, y: self.screenHeight, width: self.screenWidth, height: 0)
+            self.sethideFrame()
         })
     }
 
